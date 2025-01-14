@@ -3,16 +3,17 @@
 
 const exceptKeys = (inputValue, ...excludekeys) =>
   {
+    const copy = {...inputValue};
     const keys = Object.keys(inputValues);
     keys.forEach((key) =>
       {
         if (inputValue.includes(key))
           {
-            delete inputValue[key];       
+            delete copy[key];       
           }
 
       });
-    return inputValue;
+    return copy;
   };
 
 module.exports = EXCEPT;

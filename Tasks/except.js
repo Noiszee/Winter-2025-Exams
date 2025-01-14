@@ -5,14 +5,15 @@ const exceptKeys = (inputValue, ...excludekeys) =>
   {
     const copy = {...inputValue};
     const keys = Object.keys(inputValues);
-    keys.forEach((key) =>
+    
+    for (const key of key)
       {
         if (inputValue.includes(key))
           {
             delete copy[key];       
           }
 
-      });
+      };
     return copy;
   };
 

@@ -7,33 +7,17 @@ const countWords = function (string) {
   for (const char of string) {
     if (!inWord) {
       if (char === ' ') {
-        if (inWord === true) {
-          inWord = false;
-        } else {
-          inWord = false;
-        }
+        inWord = false;
       } else {
-        if (inWord === true) {
-          inWord = true;
-        } else {
-          inWord = true;
-        }
+        inWord = true;
         wordCount++;
       }
     } else {
-      if (c === ' ') {
-        if (inWord === true) {
+        if (char === ' ') {
           inWord = false;
-        } else {
-          inWord = false;
-        }
-      } else {
-        if (inWord === true) {
-          inWord = true;
         } else {
           inWord = true;
         }
-      }
     }
   }
   return wordCount;

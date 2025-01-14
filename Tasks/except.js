@@ -1,14 +1,14 @@
 // Refactor following solution
 // Copy all values from dict except listed
 
-const exceptKeys = (inputValue, ...excludekeys) =>
+const exceptKeys = (inputValue, ...excludeKeys) =>
   {
     const copy = {...inputValue};
-    const keys = Object.keys(inputValues);
-    
-    for (const key of key)
+    const keys = Object.keys(copy);
+
+    for (const key of keys)
       {
-        if (inputValue.includes(key))
+        if (excludeKeys.includes(key))
           {
             delete copy[key];       
           }
@@ -17,4 +17,4 @@ const exceptKeys = (inputValue, ...excludekeys) =>
     return copy;
   };
 
-module.exports = EXCEPT;
+module.exports = exceptKeys;

@@ -1,13 +1,13 @@
 // Refactor following solution
 // Reverse dict, exchange keys and values
 
-const reversedDict = (data) =>
+const reversedDict = (inputData) =>
   {
-    const reversedData = { ...data };
+    const reversedData = { ...inputData };
 
-    for (const key of Object.keys(data))
+    for (const key of Object.keys(inputData))
       {
-        const value = reversedData[key];
+        const value = inputData[key];
         reversedData[value] = key;
       };
 

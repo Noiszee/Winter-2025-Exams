@@ -4,7 +4,7 @@
 const reversedDict = (data) =>
   {
     const keys = Object.keys(data);
-    ({ ...data });
+    const reversedData = { ...data };
     keys.forEach((key) => {
       const value = reversedData[key];
       reversedData[value] = key;

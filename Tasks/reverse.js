@@ -3,14 +3,15 @@
 
 const reversedDict = (data) =>
   {
-    const keys = Object.keys(data);
     const reversedData = { ...data };
-    keys.forEach((key) => {
-      const value = reversedData[key];
-      reversedData[value] = key;
-      delete reversedData[key];
-    });
-    return reversedreversedData;
+
+    for (const key of Object.keys(data))
+      {
+        const value = reversedData[key];
+        reversedData[value] = key;
+      };
+
+    return reversedData;
   };
 
 module.exports = reversedDict;

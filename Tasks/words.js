@@ -5,20 +5,18 @@ const countWords = function (string) {
   let wordCount = 0;
   let inWord = false;
   for (const char of string) {
-    if (!inWord) {
-      if (char === ' ') {
+    if (char === ' ') {
         inWord = false;
-      } else {
-        inWord = true;
-        wordCount++;
       }
-    } else {
-        if (char === ' ') {
-          inWord = false;
-        } else {
-          inWord = true;
-        }
-    }
+      else
+      {
+        if (!inWord)
+          {
+            wordCount++;
+          }
+
+        inWord = true;      
+      }
   }
   return wordCount;
 };
